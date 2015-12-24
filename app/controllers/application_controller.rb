@@ -27,14 +27,14 @@ class ApplicationController < ActionController::Base
   def ensure_signed_in
     unless signed_in?
       flash[:errors] = ["Must be signed in."]
-      redirect_to cats_url
+      redirect_to new_user_url
     end
   end
 
   def ensure_signed_out
     if signed_in?
       flash[:errors] = ["Already logged in."]
-      redirect_to cats_url
+      redirect_to new_user_url
     end
   end
 

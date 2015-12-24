@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-
+  before_action :ensure_signed_in, only: [:show]
+  
   def new
     render :new
   end

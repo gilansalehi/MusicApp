@@ -18,4 +18,9 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    sign_out!
+    redirect_to new_user_url
+  end
+
 end
