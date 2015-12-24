@@ -1,0 +1,14 @@
+<h1><%= @track.name %></h1>
+<br>
+<a href="<%= album_url(@track.album_id) %>">Album</a>
+<br>
+<br>
+<table>
+</table>
+
+<br>
+<form action="<%= new_track_url %>" method="get">
+  <input type="hidden" name="track_id" value="<%= @track.id %>">
+  <button>Add Note</button>
+</form>
+<a href="<%= bands_url %>">All Bands</a>
