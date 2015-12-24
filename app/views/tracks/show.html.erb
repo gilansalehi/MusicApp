@@ -9,7 +9,7 @@
 <a href="<%= bands_url %>">All Bands</a>
 <br>
 
-<%= render partial: 'notes/form', locals: {track_id: @track.id} %>
+<%= render partial: 'notes/form', locals: {track: @track} %>
 <% @track.notes.each do |note| %>
-  <%= render partial: 'notes/note', locals: {track_id: @track.id} %>
+  <%= render partial: 'notes/note', locals: {track: @track, note: note} %>
 <% end %>
