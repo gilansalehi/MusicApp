@@ -1,0 +1,20 @@
+<h1><%= @album.title %></h1>
+<br>
+<a href="<%= band_url(@album.band_id) %>">Band</a>
+<br>
+<a href="<%= tracks_url %>">All Tracks</a>
+<br>
+<table>
+  <% @album.tracks.each do |track| %>
+  <tr>
+    <td><%= track.name %></td>
+  </tr>
+  <% end %>
+</table>
+
+<br>
+<form action="<%= new_track_url %>" method="get">
+  <input type="hidden" name="album_id" value="<%= @album.id %>">
+  <button>Add Track</button>
+</form>
+<a href="<%= bands_url %>">All Bands</a>

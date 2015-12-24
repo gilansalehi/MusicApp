@@ -1,0 +1,18 @@
+<h1>All Albums</h1>
+
+<table>
+  <tr>
+    <td>Album</td>
+    <td>Band</td>
+    <td>Edit</td>
+  </tr>
+  <% @albums.each do |album| %>
+  <tr>
+    <td><%= album.title %></td>
+    <td><%= Band.find(album.band_id).name %></td>
+    <td><a href="<%= albums_url %>">Edit</a></td>
+  </tr>
+  <% end %>
+</table>
+
+<a href="<%= new_album_url %>">Add Album</a>
