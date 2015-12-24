@@ -6,9 +6,10 @@
 <table>
 </table>
 
-<br>
-<form action="<%= new_track_url %>" method="get">
-  <input type="hidden" name="track_id" value="<%= @track.id %>">
-  <button>Add Note</button>
-</form>
 <a href="<%= bands_url %>">All Bands</a>
+<br>
+
+<%= render partial: 'notes/form', locals: {track_id: @track.id} %>
+<% @track.notes.each do |note| %>
+  <%= render partial: 'notes/note', locals: {track_id: @track.id} %>
+<% end %>

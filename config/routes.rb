@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :bands
   resources :albums
   resources :tracks
+  resources :notes, only: [:new, :create]
 
   root 'bands#index'
 end

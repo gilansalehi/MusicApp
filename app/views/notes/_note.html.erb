@@ -1,0 +1,5 @@
+<h2> <%= @note.title =%> </h2>
+<h3> by <%= Users.find(@note.user_id).email %> </h3>
+<p>
+  <%= @note.body %>
+</p>

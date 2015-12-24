@@ -7,6 +7,7 @@
   <% @album.tracks.each do |track| %>
   <tr>
     <td><%= track.name %></td>
+    <td> <a href="<%= track_url(track.id) %>">View Track</a> </td>
   </tr>
   <% end %>
 </table>
