@@ -21,7 +21,7 @@ class BandsController < ApplicationController
   end
 
   def edit
-    @band = Band.new
+    @band = Band.new(band_params)
     render :edit
   end
 
@@ -41,6 +41,6 @@ class BandsController < ApplicationController
 
   private
   def band_params
-    params.require[:band].permit[:name]
+    params.require(:band).permit(:name, :albums)
   end
 end
