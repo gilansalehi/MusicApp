@@ -1,0 +1,23 @@
+<h1>Bands Index</h1>
+
+<table>
+  <tr>
+    <td>
+      Name
+    </td>
+    <td>
+      Edit
+    </td>
+  </tr>
+  <% @bands.each do |band| %>
+  <tr>
+    <td>
+      <%= band.name %>
+    </td>
+    <td>
+      <a href="<%= bands_url %>">Edit</a>
+    </td>
+  </tr>
+</table>
+
+<a href="<%= new_band_url %>">Add Band</a>
